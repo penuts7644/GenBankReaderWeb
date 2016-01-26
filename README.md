@@ -12,7 +12,7 @@
 * Make sure you have at least installed version 1.3.1 of Apache Commons CLI, version 1.3.1 of Apache FileUpload and 2.4 of Apache IO. Previous versions could work, but are not officially supported. [http://commons.apache.org]
 * Apache Tomcat 8.0.28 has been used to set up a local host. Taglib Impl and Taglib Spec are used for JSP integration. Both are included when you install Tomcat. [http://commons.apache.org]
 * Fork this repository and use the bitbucket link to add the forked repository to your editing program of choice.
-* If you want to use the program without applying adjustments, you should download de dist folder.
+* If you want to use the program without applying adjustments, you should download the war distribution located at the downloads section.
 
 ### Which operations are supported? ###
 
