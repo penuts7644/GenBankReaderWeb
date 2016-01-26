@@ -1,0 +1,346 @@
+/*
+Copyright (c) 2015 Wout van Helvoirt
+All rights reserved
+*/
+/* 
+    Created on : Jan 9, 2016, 2:28:01 PM
+    Author     : Wout van Helvoirt
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+html {
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    color: #252525;
+    background: #f3f3f3;
+    font-family: 'Merriweather', 'Helvetica Neue', Helvetica, serif;
+    font-size: 15px;
+    line-height: 1.625em;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.site-header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.site-header-inside {
+    width: 90%;
+    margin: 0 auto;
+    padding: 6em 2.4em 11em;
+    position: relative;
+    z-index: 5;
+}
+
+.primary, .site-header-inside, .footnote-inside {
+    max-width: 840px;
+}
+
+.header-image{
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 102%;
+    height: 102%;
+    background-position: center center;
+    background-image: url('../img/dnasequence.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-filter: grayscale(60%);
+    -webkit-filter: blur(4px);
+    -webkit-filter: brightness(60%);
+    background-size: cover;
+    filter: grayscale(60%);
+    filter: blur(4px);
+    filter: brightness(60%);
+    background-attachment: fixed;
+}
+
+.main {
+    position: relative;
+    z-index: 10;
+    height: auto;
+}
+
+#page, .main {
+    width: 100%;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.primary {
+    background-color: rgb(255,255,255);
+    box-shadow: rgba(40,40,40, 0.2) 0px 0px 2px;
+    padding: 4em 2.4em 4em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+    #blockone{
+        margin-top: -5em;
+        margin-bottom: 4.2em;
+        border-top: 1em solid rgb(90,90,90);
+    }
+
+    #blocktwo{
+        margin-top: -3.2em;
+        margin-bottom: 4.2em;
+    }
+
+.errorMessage{
+    word-wrap: break-word;
+    color: rgb(200, 0, 0);
+}
+
+.entry-content ul .errorMessage:before {
+    content: "\0021";
+    padding-right: 1em;
+}
+
+.outputMessageBlock{
+    word-wrap: break-word;
+    font-size: 13px;
+}
+    
+.entry-content{
+    margin-bottom: 1em;
+}
+    
+.entry-content::first-letter{
+    float: left;
+    font-size: 4em;
+    margin-right: .1em;
+    line-height: .5em;
+    margin-top: .12em;
+}
+
+.entry-content ul{
+    list-style: none;
+    margin-left: 0em;
+    font-size: 13px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.entry-content ul li{
+    padding-left: 1em;
+}
+
+.entry-content ul .textMessage:before{
+    content: "\2022";
+    padding-right: 1em;
+}
+
+.hero-header {
+    text-align: left;
+    position: relative;
+}
+
+.headband .hero-title {
+    font-size: 4em;
+    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin-bottom: 0;
+    color: rgb(255,255,255);
+    text-shadow: 2px 2px rgba(40, 40, 40, 0.6);
+}
+
+.headband .hero-subtitle{
+    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    line-height: 1em;
+    margin-top: -.5em;
+    font-size: .8em;
+    text-shadow: 2px 2px rgba(40, 40, 40, 0.6);
+}
+
+h1, .h1 {
+    font-size: 2.250em;
+    line-height: 1.361em;
+    margin-bottom: 0.722em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    color: rgb(40,40,40);
+    font-weight: bold;
+    font-family: 'Merriweather', 'Helvetica Neue', Helvetica, serif;
+}
+
+.footnote {
+    position: fixed;
+    bottom: 0;
+    background: rgb(39,42,51);
+    width: 100%;
+    z-index: 10;
+    box-shadow: rgba(40,40,40, 0.6) 0px 0px 2px;
+}
+
+.footnote-inside {
+    margin: 0 auto;
+    padding: 0.8em 2.4em;
+    width: 90%;
+}
+
+.footnote-left {
+    color: rgb(140,140,140);
+    font-size: 13px;
+    float: left;
+}
+
+form{
+    width: 100%;
+    max-width: 840px;
+}
+
+#button2, #button3, #button4{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Merriweather', 'Helvetica Neue', Helvetica, serif;
+    padding-left: .6em;
+    padding-right: .6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: .6em;
+    margin-bottom: .6em;
+    width: 100%;
+    max-width: 840px;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    border-radius: 0;
+}
+
+#button2:focus, #button3:focus, #button4:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(140,140,140);
+}
+
+:-moz-placeholder {
+   color: rgb(140,140,140);
+   opacity: 1;
+}
+
+::-moz-placeholder {
+   color: rgb(140,140,140);
+   opacity: 1;
+}
+:-ms-input-placeholder {
+   color: rgb(140,140,140);
+}
+:placeholder-shown {
+  color: rgb(140,140,140);
+}
+
+#button3:focus, #button3:hover, #button2:hover, #button2:active {
+    background-color: rgba(199,202,216,.7);
+}
+
+#button3, #button4{
+    display: none;
+}
+
+#button2, #button3{
+    background-color: rgba(199,202,216,.6);
+    -webkit-transition: background-color .05s ease-in-out;
+    transition: background-color .05s ease-in-out;
+    cursor: pointer;
+}
+
+.buttonInactive{
+    -webkit-transition: background-color .05s ease-in-out;
+    transition: background-color .05s ease-in-out;
+    background-color: rgba(199,202,216,.6);
+    cursor: pointer;
+}
+
+.buttonInactive:hover{
+    background-color: rgba(199,202,216,.7);
+}
+
+.buttonActive, .buttonActive:hover{
+    -webkit-transition: background-color .05s ease-in-out;
+    transition: background-color .05s ease-in-out;
+    background-color: rgba(199,202,216,.2);
+    cursor: wait;
+}
+
+#button1{
+    background-color: rgba(199,202,216,.2);
+    width: 100%;
+    max-width: 840px;
+    margin-top: .6em;
+    margin-bottom: .6em;
+    font-family: 'Merriweather', 'Helvetica Neue', Helvetica, serif;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 0;
+    color: rgb(140,140,140);
+    outline: none;
+}
+
+#button1::-webkit-file-upload-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Merriweather', 'Helvetica Neue', Helvetica, serif;
+    outline: none;
+    border: none;
+    padding-left: .6em;
+    padding-right: .6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgba(199,202,216,.6);
+    cursor: pointer;
+    -webkit-transition: background-color .05s ease-in-out;
+    transition: background-color .05s ease-in-out;
+}
+
+#button1::-webkit-file-upload-button:hover {
+    background-color: rgba(199,202,216,.7);
+}

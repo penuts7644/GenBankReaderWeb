@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>baseURL</param-name>
+        <param-value>http://localhost:8080/GenBankReaderWeb/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>author</param-name>
+        <param-value>Wout van Helvoirt</param-value>
+    </context-param>
+    <context-param>
+        <param-name>page_name</param-name>
+        <param-value>Theme 10: Research Web Applications - GenBankReader</param-value>
+    </context-param>
+    <context-param>
+        <param-name>app_name</param-name>
+        <param-value>GenBank File Reader</param-value>
+    </context-param>
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>w.van.helvoirt@st.hanze.nl</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            10
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

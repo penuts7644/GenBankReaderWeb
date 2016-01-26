@@ -1,0 +1,9 @@
+nl/bioinf/wvanhelvoirt/genbankreader/GenBankFeatures.class
+nl/bioinf/wvanhelvoirt/genbankreader/ArgumentParser.class
+nl/bioinf/wvanhelvoirt/genbankreader/Coordinates.class
+nl/bioinf/wvanhelvoirt/servlets/GenBankReaderUploadServlet.class
+nl/bioinf/wvanhelvoirt/genbankreader/CodingSequence.class
+nl/bioinf/wvanhelvoirt/genbankreader/GeneBankFileParser.class
+nl/bioinf/wvanhelvoirt/servlets/GenBankReaderOptionServlet.class
+nl/bioinf/wvanhelvoirt/genbankreader/SequenceOrientation.class
+nl/bioinf/wvanhelvoirt/genbankreader/Gene.class
