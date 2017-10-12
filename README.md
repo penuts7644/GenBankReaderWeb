@@ -24,4 +24,4 @@ The settings that can be selected on the next page are:
 * Fetch the features within a coordinate region.
 * Find the sequence sites that match sequence RegEx pattern.
 
-** Note: A distribution with javadoc as well as example GenBank files can be found in the downloads section of this repository. **
+**Note: A distribution with javadoc as well as example GenBank files can be found in the downloads section of this repository.**
